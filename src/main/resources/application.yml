@@ -1,12 +1,14 @@
 app:
   jwt:
-    secret: some-super-secret-please-change
+    secret:  YW11LWp3dC1zZWNyZXQta2V5LXN1cGVyLWxvbmc=
     expiration-ms: 3600000
 
 server:
   port: 8081
 
 spring:
+  config:
+    import: optional:configserver:http://localhost:8888
   application:
     name: user-service
 
